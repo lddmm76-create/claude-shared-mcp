@@ -28,7 +28,8 @@ security = TransportSecuritySettings(
     ]
 )
 
-app = mcp.streamable_http_app(transport_security=security)
+mcp.settings.transport_security = security
+app = mcp.streamable_http_app()
 
 if __name__ == "__main__":
     import uvicorn
